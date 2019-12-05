@@ -1,0 +1,29 @@
+.criminalsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.criminal__card {
+    flex-basis: 30%;
+    background-color: #939393;
+    max-height: 300PX;
+    color:#f3f7f8;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.criminal__header {
+    font-weight: 550;
+    background-color: #5a7c8e;
+    color: #f3f7f8;
+    text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.criminal__info  {
+    line-height: 1.5;
+}

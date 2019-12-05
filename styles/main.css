@@ -1,0 +1,7 @@
+@import 'criminal.css';
+@import 'officer.css';
+
+body {
+    background-color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
