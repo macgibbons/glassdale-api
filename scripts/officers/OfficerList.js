@@ -11,6 +11,9 @@ const OfficerListComponent = () => {
     
 
     contentElement.innerHTML += `
+    <header class="content__header">
+    <div class="content__title"> officers </div>
+</header>
     ${
             officers.map(
                 (currentOfficer) =>  OfficerComponent(currentOfficer)).join("")

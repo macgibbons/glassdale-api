@@ -2,18 +2,24 @@
     background-color: white;
     display: flex;
     flex-wrap: wrap;
+    min-height: 500px;
     margin-left: 100px;
     margin-right: 100px;
     justify-content: center;
-    box-shadow: 0px 0px 36px -5px rgba(0,0,0,0.64);
-    padding-top: 100px
+    box-shadow: 0px 0px 36px -5px rgba(0, 0, 0, 0.64);
+}
+
+.criminals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .criminal__card {
     box-shadow: 0px 0px 5px 0px #272c2f;
-    flex-basis: 40%;
+    flex-basis: 30%;
     max-height: 300PX;
-    color:#4a4f55;
+    color: #4a4f55;
     border-radius: 4px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -22,17 +28,30 @@
 .criminal__header {
     font-weight: 550;
     background-color: #294625;
-    
+
     color: #f3f7f8;
     text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
-.criminal__info  {
+.criminal__info {
     line-height: 1.5;
     padding: 1em;
     text-transform: capitalize;
+}
+
+.content__title {
+    text-transform: capitalize;
+    color: #4a4f55;
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 50pt;
+    line-height: 1.5;
+}
+.criminal__icon {
+    width: 20%;
+    
 }
