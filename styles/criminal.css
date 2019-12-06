@@ -6,7 +6,7 @@
     margin-left: 100px;
     margin-right: 100px;
     justify-content: center;
-    box-shadow: 0px 0px 36px -5px rgba(0, 0, 0, 0.64);
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.64);
 }
 
 .criminals {
@@ -28,7 +28,6 @@
 .criminal__header {
     font-weight: 550;
     background-color: #294625;
-
     color: #f3f7f8;
     text-align: center;
     padding-top: 10px;
