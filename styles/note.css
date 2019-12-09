@@ -1,0 +1,71 @@
+.noteFormContainer {
+    font-family: Avenir-Book;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin: 80px;
+    padding: 40px;
+    justify-content: center;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.64);
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: Avenir-Book;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button {
+    font-size: 10pt;
+    color:white;
+    background-color: #294625;
+    border-radius: 100px;
+    padding-top: 10PX;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 700;
+    width: 100px;
+}
+
+button:hover {
+    box-shadow: 0px 0px 5px 0px #81bc00;
+    color: #81bc00;
+}
+
+
+#saveNote{
+    font-family: Avenir-Book;
+}
+
+fieldset {
+    border: none;
+    padding-bottom: 20px;
+}
+
+.note__header {
+    font-weight: 550;
+    background-color: #294625;
+    color: #f3f7f8;
+    text-align: center;
+    margin-top: -40px;
+    margin-left: -40px;
+    margin-right: -40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}

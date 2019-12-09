@@ -1,6 +1,4 @@
-import {
-    useCriminals
-} from "./CriminalDataProvider.js";
+import { useCriminals } from "./CriminalDataProvider.js";
 import CriminalComponent from "./Criminals.js";
 
 const eventHub = document.querySelector(".container")

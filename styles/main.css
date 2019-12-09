@@ -1,6 +1,8 @@
 @import 'criminal.css';
 @import 'officer.css';
 @import 'selector.css';
+@import 'note.css';
+
 
 body {
     background-color: #f3f3f3;
