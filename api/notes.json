@@ -1,3 +1,28 @@
 {
-    "notes": []
+  "notes": [
+    {
+      "id": 1,
+      "note": "This is a note",
+      "criminal": "This is the criminal name",
+      "date": "string"
+    },
+    {
+      "note": "",
+      "date": "",
+      "criminal": "",
+      "id": 2
+    },
+    {
+      "note": "",
+      "date": "",
+      "criminal": "",
+      "id": 3
+    },
+    {
+      "note": "this is a test",
+      "date": "2019-12-05",
+      "criminal": "bobby brown",
+      "id": 4
+    }
+  ]
 }

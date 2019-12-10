@@ -22,26 +22,26 @@ const CriminalListComponent = () => {
             }
 
         )
+        
         render(matchingCriminals)
     })
+    
     let render = criminalCollection => {
         const crime = event.detail.crimeID
         contentElement.innerHTML = ""
-        contentElement.innerHTML +=
+        contentElement.innerHTML =
             `
-
-
-<section class="criminals">
-<div class="content__title"> ${crime} </div>
-${  
-    criminalCollection.map(
-        (currentCriminal) =>  CriminalComponent(currentCriminal)).join("")
-    }
-    </section>
-    `
+            <section class="criminals">
+            <div class="content__title"> ${crime} </div>
+            ${  
+            criminalCollection.map(
+                (currentCriminal) =>  CriminalComponent(currentCriminal)).join("")
+            }
+            </section>
+            `
     
     }
-
+// render(criminals)
 }
 
 

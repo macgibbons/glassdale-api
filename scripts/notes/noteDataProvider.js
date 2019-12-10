@@ -1,6 +1,20 @@
+const eventHub = document.querySelector(".container")
+
+let notes = []
+
+export const getNotes = () => {
+    console.log("***I am going to fetch the data***");
+    return fetch('http://localhost:3000/notes')
+        .then(response => response.json())
+        .then(
+            parsedNotes => {
+                notes = parsedNotes.slice()
+            }
+        )
+}
 
 export const saveNote = note => {
-    fetch('http://localhost:8080/notes', {
+    fetch('http://localhost:3000/notes', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -10,20 +24,6 @@ export const saveNote = note => {
     .then(getNotes)
 }
 
-const NoteFormComponent = () => {
 
-    // Handle internal element click
-    eventHub.addEventListener("click", clickEvent => {
-        if (clickEvent.target.id === "saveNote") {
 
-            // Make a new object representation of a note
-            const newNote = {
-                // Key/value pairs here
-            }
 
-            // Change API state and application state
-            saveNote(newNote)
-        }
-    })
-
-}

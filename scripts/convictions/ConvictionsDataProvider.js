@@ -3,7 +3,7 @@ console.log("****  ConvictionProvider Module code ****");
 let convictions = []
 
 export const useConvictions = () => {
-    return convictions
+    return convictions.slice()
 }
 
 export const getConvictions = () => {

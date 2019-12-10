@@ -6,7 +6,8 @@ import {
     getConvictions
 } from './convictions/ConvictionsDataProvider.js';
 import ConvictionSelect from './convictions/ConvictionSelect.js';
-import NoteFormComponent from './notes/noteForm.js';
+import NoteFormComponent from './notes/note.js';
+import NoteFormBuilder from './notes/noteForm.js';
 
 getCriminals().then(
     CriminalListComponent)
@@ -21,3 +22,5 @@ getOfficers().then(
 )
 
 NoteFormComponent()
+
+NoteFormBuilder()

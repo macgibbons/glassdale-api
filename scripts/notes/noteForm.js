@@ -1,26 +1,47 @@
-const contentTarget = document.querySelector(".noteFormContainer")
+import { saveNote } from "./noteDataProvider.js";
 
-const NoteFormComponent = () => {
-    const render = () => {
-        contentTarget.innerHTML = `
-        <h2 class="note__header">Glendale PD | <span>notes.</span></h2>
-        <fieldset>
-            <label for="note__date">Date:</label>
-            <input type="date" name="note__date id="note__date">
-        </fieldset>
+const eventHub = document.querySelector(".container")
 
-        <fieldset>
-            <label for="Criminal">Criminal:</label>
-            <input type="text" name="criminal" id="criminal__form">
-        </fieldset>
-        <fieldset>
-            <textarea rows="10" cols="68"></textarea>
-        </fieldset>
-        <button id="saveNote">save</button>
-        `
+
+const NoteFormBuilder = () => {
+
+    // Handle internal element click
+    eventHub.addEventListener("click", clickEvent => {
+        if (clickEvent.target.id === "saveNote") {
+
+            // Make a new object representation of a note
+            console.log("you clicked the note save button");
+            
+            const noteText= document.querySelector("#noteInput").value
+            const noteDate= document.querySelector("#note__date").value
+            const noteCriminal= document.querySelector("#criminal__form").value
+
+            const noteObjectToSave = {
+                note: noteText,
+                date: noteDate,
+                criminal: noteCriminal
+            }
+
+            console.log(noteText, noteDate, noteCriminal)
+
+
+            const newNote = new CustomEvent ("noteSaved", {
+               detail: {
+                   note: noteObjectToSave
+               }
+            
+            })
+            eventHub.dispatchEvent(newNote)
+            // Change API state and application state
+        
+        }
+    })
+
+    eventHub.addEventListener("noteSaved", (evt) => {
+            const noteObject = evt.detail.note
+            saveNote(noteObject)
     }
-
-    render()
+    )
 }
 
-export default NoteFormComponent
+export default NoteFormBuilder

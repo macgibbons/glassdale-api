@@ -29,7 +29,7 @@ const ConvictionSelect = () => {
     })
 
     let convictionOption = convictions.sort().map(
-        conviction => `<option>${conviction}</option>`
+        conviction => `<option value="${conviction}">${conviction}</option>`
     )
 
     const render = convictionsCollection => {
@@ -55,19 +55,6 @@ export default ConvictionSelect
         Hub so that the criminal list can listen for it and change what
         it renders.
     */
-
-
- 
-
-
-
-
-
-
-
-
-
-
 
 // Get a reference to the DOM element where the <select> will be rendered
 // const contentTarget = document.querySelector(".filters__crime")
