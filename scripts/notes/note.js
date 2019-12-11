@@ -18,6 +18,7 @@ const NoteFormComponent = () => {
         </fieldset>
         <button id="saveNote">save</button>
         <button id="showNotes">show notes</button>
+        <button id="hideNotes">hide notes</button>
         `
     }
 

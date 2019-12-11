@@ -8,6 +8,7 @@ import NoteFormComponent from './notes/note.js';
 import NoteFormBuilder from './notes/noteForm.js';
 import { getNotes } from './notes/noteDataProvider.js';
 import NoteCardPrinter from './notes/noteList.js';
+import NoteCardHider from './notes/noteHide.js';
 
 getCriminals().then(
     CriminalListComponent)
@@ -25,6 +26,9 @@ NoteFormComponent()
 
 NoteFormBuilder()
 
+
 getNotes().then(
     NoteCardPrinter
 )
+
+NoteCardHider()
