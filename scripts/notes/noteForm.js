@@ -13,7 +13,8 @@ const NoteFormBuilder = () => {
             console.log("you clicked the note save button");
             
             const noteText= document.querySelector("#noteInput").value
-            const noteDate= document.querySelector("#note__date").value
+            const noteDate= Date.now()
+            // document.querySelector("#note__date").value
             const noteCriminal= document.querySelector("#criminal__form").value
 
             const noteObjectToSave = {

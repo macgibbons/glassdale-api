@@ -1,6 +1,9 @@
-const eventHub = document.querySelector(".container")
 
 let notes = []
+
+export const useNotes = () => {
+    return notes
+}
 
 export const getNotes = () => {
     console.log("***I am going to fetch the data***");

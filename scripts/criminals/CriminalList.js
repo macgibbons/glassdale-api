@@ -32,7 +32,7 @@ const CriminalListComponent = () => {
         contentElement.innerHTML =
             `
             <section class="criminals">
-            <div class="content__title"> ${crime} </div>
+            <div class="content__title"> Crime | <span>${crime}.</span> </div>
             ${  
             criminalCollection.map(
                 (currentCriminal) =>  CriminalComponent(currentCriminal)).join("")

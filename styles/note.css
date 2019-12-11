@@ -1,4 +1,4 @@
-.noteFormContainer {
+.notesContainer {
     font-family: Avenir-Book;
     background-color: white;
     display: flex;
@@ -68,4 +68,36 @@ fieldset {
     padding-bottom: 10px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+}
+
+.note__card {
+    box-shadow: 0px 0px 5px 0px #272c2f;
+    flex-basis: 30%;
+    max-height: 300PX;
+    color: #4a4f55;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    min-width: 300px;
+}
+
+.note__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.notecard__header {
+    font-weight: 550;
+    background-color: #294625;
+    color: #f3f7f8;
+    text-align: center;
+    padding: 5px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.note__details {
+    padding: 20px;
 }
