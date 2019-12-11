@@ -1,6 +1,7 @@
 import { useNotes, getNotes } from "./noteDataProvider.js";
 import { NoteCardComponent } from "./note.js";
-getNotes
+
+
 const eventHub = document.querySelector(".container")
 const contentElement = document.querySelector(".noteContainer")
 
