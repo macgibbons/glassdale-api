@@ -1,23 +1,27 @@
-// import OfficerComponent from "./officers.js";
-// import { useOfficers } from "./OfficerProvider.js";
-import { useNotes } from "./noteDataProvider.js";
+import { useNotes, getNotes } from "./noteDataProvider.js";
 import { NoteCardComponent } from "./note.js";
-
+getNotes
+const eventHub = document.querySelector(".container")
 const contentElement = document.querySelector(".noteContainer")
 
 const NoteCardPrinter = () => {
-    
-    
     const notes = useNotes()
+    eventHub.addEventListener("click", clickEvent => {
+        if(clickEvent.target.id === "showNotes"){
+            getNotes().then(
+
+                contentElement.innerHTML = `
+                
+                ${
+                    notes.map(
+                        (currentNote) =>  NoteCardComponent(currentNote)).join("")
+                    }
+                    `
+                    )
+        }
+    } )
     
 
-    contentElement.innerHTML += `
-    
-    ${
-            notes.map(
-                (currentNote) =>  NoteCardComponent(currentNote)).join("")
-    }
-    `
 }
 
 export default NoteCardPrinter

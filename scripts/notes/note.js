@@ -17,6 +17,7 @@ const NoteFormComponent = () => {
             <textarea id="noteInput" rows="10" cols="50"></textarea>
         </fieldset>
         <button id="saveNote">save</button>
+        <button id="showNotes">show notes</button>
         `
     }
 
@@ -32,6 +33,7 @@ export const NoteCardComponent = (note) => {
             <div class="note__details">
             <div>Criminal:  ${note.criminal}</div>
             <div>note: ${note.note}</div>
+            <button id="deleteNote">delete</button>
             </div>
             </div>
    `
