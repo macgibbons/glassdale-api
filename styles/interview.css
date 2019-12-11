@@ -1,0 +1,38 @@
+.interviewContainer {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+    justify-content: center;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.64);
+}
+.interview__card {
+    
+    box-shadow: 0px 0px 5px 0px #272c2f;
+    flex-basis: 10%;
+    max-height: 300PX;
+    color: #4a4f55;
+    border-radius: 4px;
+    margin: 10px;
+    min-width: 300px;
+
+}
+
+.interview__header {
+    font-weight: 550;
+    background-color: #294625;
+    color: #f3f7f8;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.interview__info {
+    line-height: 1.5;
+    padding: 1em;
+    text-transform: capitalize;
+}
