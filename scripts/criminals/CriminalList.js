@@ -38,6 +38,7 @@ const CriminalListComponent = () => {
                 (currentCriminal) =>  CriminalComponent(currentCriminal)).join("")
             }
             </section>
+            <div class="interviewContainer"></div>
             `
     
     }

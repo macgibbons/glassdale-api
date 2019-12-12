@@ -3,6 +3,7 @@
 @import 'selector.css';
 @import 'note.css';
 @import 'interview.css';
+@import 'witness.css';
 
 
 body {
@@ -35,4 +36,10 @@ body {
 span {
     font-weight: 100;
     color: #81bc00;
+}
+
+.associate__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }

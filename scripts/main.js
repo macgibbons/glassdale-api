@@ -11,6 +11,8 @@ import NoteCardPrinter from './notes/noteList.js';
 import NoteCardHider from './notes/noteHide.js';
 import interviewAssociates from './interview/interviewList.js';
 import interviewHider from './interview/interviewHide.js';
+import { getWitnesses, useWitnesses } from './witnesses/witnessProvider.js';
+import showWitnesses from './witnesses/witnesslist.js';
 
 getCriminals().then(
     CriminalListComponent)
@@ -40,3 +42,12 @@ getCriminals().then(
 )
 
 interviewHider()
+
+getWitnesses().then(
+    console.log(
+        useWitnesses()
+
+    )
+)
+
+showWitnesses()

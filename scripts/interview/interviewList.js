@@ -14,12 +14,19 @@ const interviewAssociates = () => {
                 
                 if(`${currentCriminal.id}` === clickEvent.target.id){
                     associates = currentCriminal.known_associates
-                    contentTarget.innerHTML= `${
+                    contentTarget.innerHTML+= `
+                    <div class="content__title"> assosiates | <span>${currentCriminal.name}.</span> </div>
+                    <div class="associate__container">
+                    ${
                         associates.map(
                         (currentAssociate) => InterviewComponent(currentAssociate)
-                    ).join("")}`
+                    ).join("")} 
+                    </div>
+                    
+                    `
                         
-                    } }
+                    }
+                 }
                 
                 )
         }

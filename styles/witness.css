@@ -1,15 +1,5 @@
-.interviewContainer {
-    background-color: white;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 80px;
-    margin-left: 80px;
-    margin-right: 80px;
-    justify-content: center;
-    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.64);
-    margin-bottom: 40px;
-}
-.interview__card {
+
+.witness__card {
     
     box-shadow: 0px 0px 5px 0px #272c2f;
     flex-basis: 10%;
@@ -21,8 +11,14 @@
     min-width: 300px;
 
 }
+.witness {
+  
+}
+.witness__title {
+    width: 100%;
+}
 
-.interview__header {
+.witness__header{
     font-weight: 550;
     background-color: #294625;
     color: #f3f7f8;
@@ -33,12 +29,12 @@
     border-top-right-radius: 4px;
 }
 
-.interview__info {
+.witness__info {
     line-height: 1.5;
     padding: 1em;
     text-transform: capitalize;
 }
-
-.interviewClose__button {
-    padding-bottom: 20px;
+.witness__icon {
+    width: 20%;
+    
 }
