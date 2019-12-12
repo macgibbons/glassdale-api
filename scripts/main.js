@@ -7,7 +7,6 @@ import ConvictionSelect from './convictions/ConvictionSelect.js';
 import NoteFormBuilder from './notes/noteForm.js';
 import { getNotes } from './notes/noteDataProvider.js';
 import NoteCardPrinter from './notes/noteList.js';
-import NoteCardHider from './notes/noteHide.js';
 import interviewAssociates from './interview/interviewList.js';
 import interviewHider from './interview/interviewHide.js';
 import { getWitnesses, useWitnesses } from './witnesses/witnessProvider.js';
@@ -24,7 +23,6 @@ const loadData = () => {
 const renderInitialComponents = () => {
     ConvictionSelect()
     NoteFormBuilder()
-    // NoteCardHider()
     NoteCardPrinter()
     CriminalListComponent()
     OfficerListComponent()

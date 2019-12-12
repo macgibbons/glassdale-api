@@ -6,7 +6,6 @@ export const useNotes = () => {
 }
 
 export const getNotes = () => {
-    console.log("***I am going to fetch the data***");
     return fetch('http://localhost:3000/notes')
         .then(response => response.json())
         .then(
