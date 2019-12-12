@@ -25,9 +25,9 @@ const renderInitialComponents = () => {
     NoteFormBuilder()
     NoteCardPrinter()
     CriminalListComponent()
-    OfficerListComponent()
+    // OfficerListComponent()
     interviewAssociates()
-    interviewHider()
+    // interviewHider()
     showWitnesses()
 }
 

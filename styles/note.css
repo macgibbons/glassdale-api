@@ -2,12 +2,15 @@
     font-family: Avenir-Book;
     background-color: white;
     display: flex;
+    flex-basis: 20%;
     flex-direction: column;
     flex-wrap: wrap;
     min-height: 100px;
-    margin-left: 80px;
-    margin-right: 80px;
-    margin: 80px;
+    max-height: 500px;
+    margin-left: 20px;
+    /* margin-top: 80px; */
+    /* margin-right: 80px; */
+    /* margin: 80px; */
     padding: 40px;
     justify-content: center;
     box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.64);
@@ -62,7 +65,7 @@ fieldset {
     background-color: #294625;
     color: #f3f7f8;
     text-align: center;
-    margin-top: -40px;
+    margin-top: -102px;
     margin-left: -40px;
     margin-right: -40px;
     padding-top: 10px;

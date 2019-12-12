@@ -43,3 +43,10 @@ span {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

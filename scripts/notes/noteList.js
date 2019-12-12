@@ -4,31 +4,34 @@ const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".noteContainer")
 
 const NoteCardPrinter = () => {
-    const notes = useNotes()
-
-    // this function uses the custom event "showNoteButtonClicked" and envokes the render function,
-    // which display's the notes on the DOM
-    eventHub.addEventListener("showNoteButtonClicked", clickEvent => {
-        render(notes)
-    })
-
-    // this function listens for a click on the "delete" button 
-    eventHub.addEventListener("click", clickEvent => {
-    const notes = useNotes()
-    // if the id of the button starts with "deleteNote--" then it performs the next function
-    if (clickEvent.target.id.startsWith("deleteNote--")) {
-
-        // this creates an array and .split takes the "deleteNote" and "#" value from the id and splits it 
-        // into separate variables
-        const [prefix, id] = clickEvent.target.id.split("--")
     
-        // this creates a new custom event "deleteNoteClicked" where it builds an object containing the ID of  
-        // the button clicked so we now can use that info to delete that specific note
-        const message = new CustomEvent("deleteNoteClicked", {
-             detail: {
-                noteId: id
-                }
-    })
+        // this function uses the custom event "showNoteButtonClicked" and envokes the render function,
+        // which display's the notes on the DOM
+        eventHub.addEventListener("showNoteButtonClicked", clickEvent => {
+            getNotes().then(
+                () => {
+                    const notes = useNotes()
+                    render(notes)
+                })
+        })
+        
+        // this function listens for a click on the "delete" button 
+        eventHub.addEventListener("click", clickEvent => {
+            const notes = useNotes()
+            // if the id of the button starts with "deleteNote--" then it performs the next function
+            if (clickEvent.target.id.startsWith("deleteNote--")) {
+                
+                // this creates an array and .split takes the "deleteNote" and "#" value from the id and splits it 
+                // into separate variables
+                const [prefix, id] = clickEvent.target.id.split("--")
+                
+                // this creates a new custom event "deleteNoteClicked" where it builds an object containing the ID of  
+                // the button clicked so we now can use that info to delete that specific note
+                const message = new CustomEvent("deleteNoteClicked", {
+                    detail: {
+                        noteId: id
+                    }
+                })
 
     // this dispatches the custom event message to the eventHub
     eventHub.dispatchEvent(message)
