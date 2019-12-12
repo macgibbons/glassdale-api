@@ -8,11 +8,15 @@
     border-radius: 4px;
     margin: 10px;
     margin-bottom: 25px;
-    min-width: 300px;
+    min-width: 250px;
 
 }
-.witness {
-  
+.witnesses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 40px;
+    width: 100%;
 }
 .witness__title {
     width: 100%;
