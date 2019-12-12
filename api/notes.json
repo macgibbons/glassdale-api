@@ -1,12 +1,6 @@
 {
   "notes": [
     {
-      "note": "Louisa is  a likely suspect. ",
-      "date": "2019-12-10",
-      "criminal": "Louisa Stroman",
-      "id": 5
-    },
-    {
       "note": "Mac is another likely suspect lorem ipsum ",
       "date": "2019-12-18",
       "criminal": "Mac",
@@ -17,12 +11,6 @@
       "date": 1576081933418,
       "criminal": "Jonny",
       "id": 7
-    },
-    {
-      "note": "",
-      "date": 1576172934855,
-      "criminal": "",
-      "id": 8
     }
   ]
 }

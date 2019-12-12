@@ -4,7 +4,6 @@ import { getOfficers } from './officers/OfficerProvider.js';
 import OfficerListComponent from './officers/OfficerList.js';
 import { getConvictions } from './convictions/ConvictionsDataProvider.js';
 import ConvictionSelect from './convictions/ConvictionSelect.js';
-import NoteFormComponent from './notes/note.js';
 import NoteFormBuilder from './notes/noteForm.js';
 import { getNotes } from './notes/noteDataProvider.js';
 import NoteCardPrinter from './notes/noteList.js';
@@ -14,40 +13,31 @@ import interviewHider from './interview/interviewHide.js';
 import { getWitnesses, useWitnesses } from './witnesses/witnessProvider.js';
 import showWitnesses from './witnesses/witnesslist.js';
 
-getCriminals().then(
-    CriminalListComponent)
+const loadData = () => {
+    return getConvictions()
+        .then(getNotes)
+        .then(getCriminals)
+        .then(getOfficers)
+        .then(getWitnesses)
+}
+
+const renderInitialComponents = () => {
+    ConvictionSelect()
+    NoteFormBuilder()
+    // NoteCardHider()
+    NoteCardPrinter()
+    CriminalListComponent()
+    OfficerListComponent()
+    interviewAssociates()
+    interviewHider()
+    showWitnesses()
+}
 
 
-getConvictions().then(
-    ConvictionSelect
-)
-
-getOfficers().then(
-    OfficerListComponent
-)
-
-NoteFormComponent()
-
-NoteFormBuilder()
+loadData().then(renderInitialComponents)
 
 
-getNotes().then(
-    NoteCardPrinter
-)
 
-NoteCardHider()
 
-getCriminals().then(
-    interviewAssociates
-)
 
-interviewHider()
 
-getWitnesses().then(
-    console.log(
-        useWitnesses()
-
-    )
-)
-
-showWitnesses()
