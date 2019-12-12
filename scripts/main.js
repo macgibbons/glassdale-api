@@ -9,7 +9,8 @@ import NoteFormBuilder from './notes/noteForm.js';
 import { getNotes } from './notes/noteDataProvider.js';
 import NoteCardPrinter from './notes/noteList.js';
 import NoteCardHider from './notes/noteHide.js';
-import interviewAssociates from './criminals/interviewList.js';
+import interviewAssociates from './interview/interviewList.js';
+import interviewHider from './interview/interviewHide.js';
 
 getCriminals().then(
     CriminalListComponent)
@@ -37,3 +38,5 @@ NoteCardHider()
 getCriminals().then(
     interviewAssociates
 )
+
+interviewHider()

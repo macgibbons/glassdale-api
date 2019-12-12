@@ -11,7 +11,7 @@ const InterviewComponent = (associate) => {
         <div class="conviction">Alibi: ${associate.alibi
           }
         </div>
-        <button class="interviewClose__button">close</button>
+        <button id="interviewClose__button">close</button>
     </div>
     </section>
     `

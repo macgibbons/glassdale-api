@@ -1,5 +1,5 @@
-import { useCriminals } from "./CriminalDataProvider.js";
 import InterviewComponent from "./interview.js";
+import { useCriminals } from "../criminals/CriminalDataProvider.js";
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".interviewContainer")
@@ -27,7 +27,6 @@ const interviewAssociates = () => {
 }
 console.log(associates)
 export default interviewAssociates
-
 // const currentCriminal = () => {
 
 // }
