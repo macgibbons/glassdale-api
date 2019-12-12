@@ -1,20 +1,16 @@
-const InterviewComponent = (criminal) => {
+const InterviewComponent = (associate) => {
     return `
     <section class="interview__card">
     <header class="interview__header">
-        <div>${criminal.known_associates.map(
-            (ka) => {
-                return ka.name
-            }
-        ).join(" ")}</div>
+        <div>${associate.name}
+        
+        </div>
     </header>
     <div class="interview__info">
     <img class="criminal__icon" src="/images/interview.svg" alt="icon of a burlar">
-        <div class="conviction">Alibi: ${criminal.known_associates.map (
-            (ka) => {
-                return ka.alibi
-            }
-        ).join(" ")}</div>
+        <div class="conviction">Alibi: ${associate.alibi
+          }
+        </div>
         <button class="interviewClose__button">close</button>
     </div>
     </section>
