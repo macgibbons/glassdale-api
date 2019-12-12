@@ -1,18 +1,6 @@
 {
   "notes": [
     {
-      "id": 1,
-      "note": "This is a note",
-      "criminal": "This is the criminal name",
-      "date": "string"
-    },
-    {
-      "note": "this is a test",
-      "date": "2019-12-05",
-      "criminal": "bobby brown",
-      "id": 4
-    },
-    {
       "note": "Louisa is  a likely suspect. ",
       "date": "2019-12-10",
       "criminal": "Louisa Stroman",
@@ -31,16 +19,10 @@
       "id": 7
     },
     {
-      "note": "garrett done it",
-      "date": 1576082389277,
-      "criminal": "Garrett",
-      "id": 8
-    },
-    {
       "note": "",
-      "date": 1576101449090,
+      "date": 1576172934855,
       "criminal": "",
-      "id": 9
+      "id": 8
     }
   ]
 }

@@ -34,7 +34,7 @@ export const NoteCardComponent = (note) => {
             <div class="note__details">
             <div>Criminal:  ${note.criminal}</div>
             <div>note: ${note.note}</div>
-            <button id="deleteNote">delete</button>
+            <button id="deleteNote--${note.id}">Delete</button>
             </div>
             </div>
    `
