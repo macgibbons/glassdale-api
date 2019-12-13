@@ -1,5 +1,6 @@
 import { useWitnesses } from "./witnessProvider.js";
 import witnessComponent from "./witnesses.js";
+import CriminalListComponent from "../criminals/CriminalList.js";
 
 
 const eventHub = document.querySelector(".container")
@@ -27,8 +28,15 @@ const showWitnesses = () => {
         }
     } )
 
-}
+    eventHub.addEventListener("click", clickEvent => {
+        if(clickEvent.target.id === "witenessClose__button"){
+            console.log("you clicked to close")
+                CriminalListComponent()
+                    
+        }
+    } )
 
+}
 
 
 export default showWitnesses

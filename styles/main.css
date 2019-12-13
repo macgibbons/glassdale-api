@@ -13,7 +13,8 @@ body {
 
 .page__header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: baseline;
     background-color: #294625;
     color: white;
     margin-top: -20px;
@@ -24,6 +25,17 @@ body {
     box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.64);
 
 }
+
+.header__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: -100px;
+}
+
 
 .content__header {
     display: block;
@@ -40,6 +52,13 @@ span {
 
 .associate__container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }

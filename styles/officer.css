@@ -1,10 +1,11 @@
 .officersContainer {
+    flex-basis: 20%;
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
     background-color: white;
-    margin-left: 100px;
-    margin-right: 100px;
+    /* margin-left: 100px;
+    margin-right: 100px; */
     justify-content: center;
     box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.64);
 }
