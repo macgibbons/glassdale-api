@@ -1,6 +1,4 @@
-import InterviewComponent from "./interview.js";
 import { useCriminals } from "../criminals/CriminalDataProvider.js";
-import CriminalListComponent from "../criminals/CriminalList.js";
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".interviewContainer")
 
@@ -18,7 +16,7 @@ const interviewAssociates = () => {
                 return singleCriminal.id === parseInt(event.detail.criminalId, 10)
             }
          )
-        //  this builds the HTML that will go in 
+        //  this builds the HTML that will go in by looping the known associates array of the found criminal 
          const alibisHTML = foundCriminal.known_associates.map(
              (singleAssociate) => {
                  return `

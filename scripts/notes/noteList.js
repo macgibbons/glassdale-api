@@ -1,7 +1,7 @@
 import { useNotes, deleteNote, getNotes } from "./noteDataProvider.js";
      
 const eventHub = document.querySelector(".container")
-const contentTarget = document.querySelector(".noteContainer")
+const contentTarget = document.querySelector(".interviewContainer")
 
 const NoteCardPrinter = () => {
     

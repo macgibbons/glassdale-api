@@ -12,14 +12,16 @@
     <main class="container">
         <header class="page__header">
             <h1 class="headline">Glassdale PD | <span>database.</span> </h1>
-
-            <div class="filters">
-                <div class="filter filters__crime"></div>
-                <div class="filter filters__incarceration"></div>
-                <div class="filter filters__officer"></div>
-            </div>
-            <button id="witness__button">interview witnesses</button>
-            <button id="witenessClose__button">hide witnesses</button>
+            <section class="header__content">
+                <div class="filters">
+                    <div class="filter filters__crime"></div>
+                    <div class="filter filters__incarceration"></div>
+                    <div class="filter filters__officer"></div>
+                </div>
+                <button class="witness__button" id="witness__button">interview witnesses</button>
+                <button class="witness__button" id="witenessClose__button">hide witnesses</button>
+            </section>
+            
         </header>
         <article class="interviewContainer"></article>
         <section class="content">
@@ -30,10 +32,10 @@
                 <h2 class="note__header">Glassdale PD | <span>notes.</span></h2>
                 <div class="note__content">
                     <article class="noteFormContainer"></article>
-                    <section class="noteContainer"></section>
                 </div>
+                <section class="noteContainer"></section>
             </div>
-            <article class="criminalsContainer"></article>
+            <!-- <article class="criminalsContainer"></article> -->
             <article class="officersContainer"></article>
         </section>
     </main>

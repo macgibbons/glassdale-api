@@ -1,5 +1,5 @@
 import { useCriminals } from "./CriminalDataProvider.js";
-import CriminalComponent from "./Criminals.js";
+import CriminalComponent, { criminalsCrime } from "./Criminals.js";
 
 const eventHub = document.querySelector(".container")
 const contentElement = document.querySelector(".criminalsContainer")
@@ -53,7 +53,7 @@ const CriminalListComponent = () => {
         contentElement.innerHTML =
             `
             <section class="criminals">
-            <div class="content__title"> Crime | <span>crime.</span> </div>
+            <div class="content__title">  Glassdale PD | <span>criminals.</span> </div>
             ${  
             criminalCollection.map(
                 (currentCriminal) =>  CriminalComponent(currentCriminal)).join("")

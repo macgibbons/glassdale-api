@@ -21,3 +21,7 @@ const CriminalComponent = (criminal) => {
 
 
 export default CriminalComponent
+
+export const criminalsCrime = (criminal) => {
+    return `${criminal.crime}`
+}

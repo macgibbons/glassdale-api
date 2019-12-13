@@ -1,7 +1,7 @@
 import { saveNote } from "./noteDataProvider.js";
 
 const contentTarget = document.querySelector(".noteFormContainer")
-const contentElement = document.querySelector(".noteContainer")
+const contentElement = document.querySelector(".interviewContainer")
 const eventHub = document.querySelector(".container")
 
 const NoteFormBuilder = () => {
@@ -47,12 +47,7 @@ const NoteFormBuilder = () => {
     // this function renders the HTML for the Note form
     const render = () => {
         contentTarget.innerHTML = `
-        
-        <fieldset>
-            <label for="note__date">Date:</label>
-            <input type="date" name="note__date" id="note__date">
-        </fieldset>
-
+    
         <fieldset>
             <label for="Criminal">Criminal:</label>
             <input type="text" name="criminal" id="criminal__form">
