@@ -1,16 +1,3 @@
 {
-  "notes": [
-    {
-      "note": "asdf",
-      "date": 1576267387258,
-      "criminal": "asdf",
-      "id": 1
-    },
-    {
-      "note": "sadfadsfa",
-      "date": 1576267728648,
-      "criminal": "asdfasd",
-      "id": 2
-    }
-  ]
+  "notes": []
 }

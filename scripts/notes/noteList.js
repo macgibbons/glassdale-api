@@ -50,7 +50,10 @@ const NoteCardPrinter = () => {
     eventHub.dispatchEvent(message)
     
     // this envokes the deleteNote function and re-renders the notes
-    deleteNote(id).then( () => render(notes) )
+    deleteNote(id).then( 
+        () => {
+            const newNotes=useNotes()
+            render(newNotes) })
      
     }
     })
