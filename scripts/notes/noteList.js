@@ -1,18 +1,31 @@
 import { useNotes, deleteNote, getNotes } from "./noteDataProvider.js";
      
 const eventHub = document.querySelector(".container")
-const contentTarget = document.querySelector(".interviewContainer")
+const contentTarget = document.querySelector(".noteContainer")
 
 const NoteCardPrinter = () => {
+
+    const rerenderNotes = ()=> {
+        getNotes().then(
+             () => {
+                 const notes = useNotes()
+                 render(notes)
+             })
+            } 
     
-        // this function uses the custom event "showNoteButtonClicked" and envokes the render function,
-        // which display's the notes on the DOM
+    eventHub.addEventListener("noteCreated", clickEvent => {
+        
+        rerenderNotes()
+        
+        
+    })
+    // this function uses the custom event "showNoteButtonClicked" and envokes the render function,
+    // which display's the notes on the DOM
         eventHub.addEventListener("showNoteButtonClicked", clickEvent => {
-            getNotes().then(
-                () => {
-                    const notes = useNotes()
-                    render(notes)
-                })
+            
+              rerenderNotes()
+                
+             
         })
         
         // this function listens for a click on the "delete" button 
@@ -55,6 +68,7 @@ const render = (notesCollection) => {
                 <div>Criminal:  ${note.criminal}</div>
                 <div>note: ${note.note}</div>
                 <button id="deleteNote--${note.id}">Delete</button>
+                <button id="editNote--${note.id}">Edit</button>
                 </div>
                 </div>
                 `

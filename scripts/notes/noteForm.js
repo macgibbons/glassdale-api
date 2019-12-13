@@ -1,7 +1,7 @@
 import { saveNote } from "./noteDataProvider.js";
 
 const contentTarget = document.querySelector(".noteFormContainer")
-const contentElement = document.querySelector(".interviewContainer")
+const contentElement = document.querySelector(".noteContainer")
 const eventHub = document.querySelector(".container")
 
 const NoteFormBuilder = () => {
@@ -24,7 +24,14 @@ const NoteFormBuilder = () => {
             }
 
             // envoking savenote is saving noteObjectToSave to the API
-            saveNote(noteObjectToSave)
+            saveNote(noteObjectToSave).then(() => {
+                if (contentElement.innerHTML !== ""){
+                    const message = new CustomEvent("noteCreated")
+                    eventHub.dispatchEvent(message)
+                }
+                
+            }
+            )
         }
     })
     // this function makes the "hide notes" button remove the notes from the DOM
@@ -50,10 +57,10 @@ const NoteFormBuilder = () => {
     
         <fieldset>
             <label for="Criminal">Criminal:</label>
-            <input type="text" name="criminal" id="criminal__form">
+            <input placeholder="the criminal..." type="text" name="criminal" id="criminal__form">
         </fieldset>
         <fieldset>
-            <textarea id="noteInput" rows="10" cols="50"></textarea>
+            <textarea placeholder="notes here..." id="noteInput" rows="10" cols="50"></textarea>
         </fieldset>
         <button id="saveNote">save</button>
         <button id="showNotes">show notes</button>

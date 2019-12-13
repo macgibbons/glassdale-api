@@ -19,6 +19,21 @@
     box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.64);
 }
 
+.noteContainer {
+    font-family: Avenir-Book;
+    /* background-color: white; */
+    flex-basis: 20%;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-top: 37px;
+    margin-right: 80px;
+    margin: 80px;
+    padding: 40px;
+    justify-content: center;
+    /* box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.64); */
+}
 
 fieldset{
     display: flex;
@@ -69,7 +84,7 @@ fieldset {
     background-color: #294625;
     color: #f3f7f8;
     text-align: center;
-    margin-top: -108px;
+    margin-top: -77px;
     margin-left: -40px;
     margin-right: -40px;
     padding-top: 10px;
@@ -79,6 +94,7 @@ fieldset {
 }
 
 .note__card {
+    background-color: white;
     box-shadow: 0px 0px 5px 0px #272c2f;
     flex-basis: 30%;
     max-height: 300PX;
@@ -108,4 +124,11 @@ fieldset {
 
 .note__details {
     padding: 20px;
+}
+
+.everynote {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
+    flex-wrap: wrap
 }
