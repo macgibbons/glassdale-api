@@ -1,3 +1,22 @@
 {
-  "notes": []
+  "notes": [
+    {
+      "id": 1,
+      "note": "hey",
+      "criminal": "hey",
+      "date": 1578428804073
+    },
+    {
+      "id": 2,
+      "note": "fixed it finally",
+      "criminal": "mac",
+      "date": 1578428814355
+    },
+    {
+      "note": "6th try",
+      "date": 1578428759385,
+      "criminal": "mac",
+      "id": 3
+    }
+  ]
 }

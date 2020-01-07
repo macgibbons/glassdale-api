@@ -5,31 +5,52 @@ const contentTarget = document.querySelector(".noteContainer")
 
 const NoteCardPrinter = () => {
 
-    const rerenderNotes = ()=> {
-        getNotes().then(
-             () => {
-                 const notes = useNotes()
-                 render(notes)
-             })
-            } 
-    
-    eventHub.addEventListener("noteCreated", clickEvent => {
-        
-        rerenderNotes()
-        
-        
+    eventHub.addEventListener("noteHasBeenEdited", event => {
+       renderNotesAgain()
     })
-    // this function uses the custom event "showNoteButtonClicked" and envokes the render function,
-    // which display's the notes on the DOM
-        eventHub.addEventListener("showNoteButtonClicked", clickEvent => {
-            
-              rerenderNotes()
-                
-             
-        })
-        
-        // this function listens for a click on the "delete" button 
+
+    eventHub.addEventListener("click", clickEvent => {
+        if (clickEvent.target.id.startsWith("editNote--")) {
+            const [deletePrefix, noteId] = clickEvent.target.id.split("--")
+
+            const editEvent = new CustomEvent("editButtonClicked", {
+                detail: {
+                    noteId: noteId
+                }
+            })
+
+            eventHub.dispatchEvent(editEvent)
+        }
+
+        if (clickEvent.target.id.startsWith("deleteNote--")) {
+            const [deletePrefix, noteId] = clickEvent.target.id.split("--")
+
+            deleteNote(noteId).then(
+                () => {
+                    const theNewNotes = useNotes()
+                    render(theNewNotes)
+                }
+            )
+        }
+    })
+
+    const renderNotesAgain = () => {
+  
+        const allTheNotes = useNotes()
+        render(allTheNotes)
+
+    }
+
+    eventHub.addEventListener("noteCreated", event => {
+        renderNotesAgain()
+    })
+
+    eventHub.addEventListener("showNoteButtonClicked", event => {
+        renderNotesAgain()
+    })
+     // this function listens for a click on the "delete" button 
         eventHub.addEventListener("click", clickEvent => {
+
             const notes = useNotes()
             // if the id of the button starts with "deleteNote--" then it performs the next function
             if (clickEvent.target.id.startsWith("deleteNote--")) {
@@ -80,3 +101,4 @@ const render = (notesCollection) => {
             )
 }
 export default NoteCardPrinter
+
