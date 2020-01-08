@@ -11,6 +11,7 @@ const NoteCardPrinter = () => {
 
     eventHub.addEventListener("click", clickEvent => {
         if (clickEvent.target.id.startsWith("editNote--")) {
+            
             const [deletePrefix, noteId] = clickEvent.target.id.split("--")
 
             const editEvent = new CustomEvent("editButtonClicked", {
