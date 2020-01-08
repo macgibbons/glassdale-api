@@ -8,39 +8,58 @@ const CriminalListComponent = () => {
 
     const criminals = useCriminals()
 
-    // this is listening for a custom event "crimeSelected" in the dropdown
-    eventHub.addEventListener("crimeSelected", event => {
-
-        // this is creating a variable that stores the crime that was selected 
-        const crime = event.detail.crimeID
-
-        // defining a function that 
-        const matchingCriminals = criminals.filter(
-            (currentCriminal) => {
-                if (currentCriminal.conviction === crime) {
-                    return currentCriminal
+    eventHub.addEventListener("filterClicked", event => {
+        const crimeName = event.detail.crime
+        const officerName = event.detail.officer
+        const filteredCriminals = criminals.filter(
+            (individualCriminal) => {
+                if (individualCriminal.conviction === crimeName) {
+                    return individualCriminal
                 }
             }
-
         )
-        
-        render(matchingCriminals)
+        .filter(criminal => {
+            if (criminal.arrestingOfficer === officerName) {
+                return criminal
+            }
+        })
+
+        render(filteredCriminals)
     })
 
-    // this listens for the officer selected from the drop down
-    eventHub.addEventListener('officerSelected', event => {
-        if ("officerName" in event.detail) {
-            // if there is no officer selected it will just render the whole criminal list
-            if (event.detail.officerName === "0") {
-                render(appStateCriminals)
-            } else {
-                // else it will perform the getCriminalsByOfficer function using that officer 
-                // name as a variable and then re render the criminals after being filtered
-                const filteredCriminals = getCriminalsByOfficer(event.detail.officerName)
-                render(filteredCriminals)
-            }
-        }
-    })
+    // this is listening for a custom event "crimeSelected" in the dropdown
+    // eventHub.addEventListener("crimeSelected", event => {
+
+    //     // this is creating a variable that stores the crime that was selected 
+    //     const crime = event.detail.crimeID
+
+    //     // defining a function that 
+    //     const matchingCriminals = criminals.filter(
+    //         (currentCriminal) => {
+    //             if (currentCriminal.conviction === crime) {
+    //                 return currentCriminal
+    //             }
+    //         }
+
+    //     )
+        
+    //     render(matchingCriminals)
+    // })
+
+    // // this listens for the officer selected from the drop down
+    // eventHub.addEventListener('officerSelected', event => {
+    //     if ("officerName" in event.detail) {
+    //         // if there is no officer selected it will just render the whole criminal list
+    //         if (event.detail.officerName === "0") {
+    //             render(appStateCriminals)
+    //         } else {
+    //             // else it will perform the getCriminalsByOfficer function using that officer 
+    //             // name as a variable and then re render the criminals after being filtered
+    //             const filteredCriminals = getCriminalsByOfficer(event.detail.officerName)
+    //             render(filteredCriminals)
+    //         }
+    //     }
+    // })
     // this function listens for a click, specifically if the button id starts with "associates--"
     eventHub.addEventListener("click", clickEvent => {
         if (clickEvent.target.id.startsWith("associates--")) {

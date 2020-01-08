@@ -15,16 +15,18 @@ const ConvictionSelect = () => {
     const convictions = useConvictions()
     eventHub.addEventListener("change", changeEvent => {
         if (changeEvent.target.classList.contains("dropdown")){
-
-        const selectedCrime = changeEvent.target.value
+            if (changeEvent.target.id === "crimeSelect"){
+                const selectedCrime = changeEvent.target.value
+                const crimes = new CustomEvent ("crimeSelected", {
+                   detail: {
+                       crime: selectedCrime
+                   } 
+                })
+                
+                eventHub.dispatchEvent(crimes)
+            }
         
 
-        const crimes = new CustomEvent ("crimeSelected", {
-           detail: {
-               crimeID: selectedCrime
-           } 
-        })
-        eventHub.dispatchEvent(crimes)
 }
     })
 
