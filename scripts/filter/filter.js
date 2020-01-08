@@ -12,11 +12,12 @@ const FilterButton = () => {
     })
 
     eventHub.addEventListener("officerSelected", event => {
-        crime = event.detail.officerName
+        officer = event.detail.officerName
     })
 
     eventHub.addEventListener("click", clickEvent => {
         if (clickEvent.target.id === "filterButton") {
+            debugger
             const message = new CustomEvent("filterClicked", {
                 detail: {
                     officer: officer,
