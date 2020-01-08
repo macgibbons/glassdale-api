@@ -34,7 +34,8 @@ const CriminalListComponent = () => {
             if (event.detail.officerName === "0") {
                 render(appStateCriminals)
             } else {
-                // else it will get....
+                // else it will perform the getCriminalsByOfficer function using that officer 
+                // name as a variable and then re render the criminals after being filtered
                 const filteredCriminals = getCriminalsByOfficer(event.detail.officerName)
                 render(filteredCriminals)
             }

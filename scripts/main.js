@@ -12,6 +12,7 @@ import interviewHider from './interview/interviewHide.js';
 import { getWitnesses, useWitnesses } from './witnesses/witnessProvider.js';
 import showWitnesses from './witnesses/witnesslist.js';
 import officerSelect from './officers/OfficerSelect.js';
+import FilterButton from './filter/filter.js';
 
 const loadData = () => {
     return getConvictions()
@@ -26,6 +27,7 @@ const renderInitialComponents = () => {
     NoteFormBuilder()
     NoteCardPrinter()
     officerSelect()
+    FilterButton()
     CriminalListComponent()
     // OfficerListComponent()
     interviewAssociates()
