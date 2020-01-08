@@ -1,4 +1,4 @@
-import { useCriminals } from "./CriminalDataProvider.js";
+import { useCriminals, getCriminalsByOfficer } from "./CriminalDataProvider.js";
 import CriminalComponent, { criminalsCrime } from "./Criminals.js";
 
 const eventHub = document.querySelector(".container")
@@ -27,6 +27,19 @@ const CriminalListComponent = () => {
         render(matchingCriminals)
     })
 
+    // this listens for the officer selected from the drop down
+    eventHub.addEventListener('officerSelected', event => {
+        if ("officerName" in event.detail) {
+            // if there is no officer selected it will just render the whole criminal list
+            if (event.detail.officerName === "0") {
+                render(appStateCriminals)
+            } else {
+                // else it will get....
+                const filteredCriminals = getCriminalsByOfficer(event.detail.officerName)
+                render(filteredCriminals)
+            }
+        }
+    })
     // this function listens for a click, specifically if the button id starts with "associates--"
     eventHub.addEventListener("click", clickEvent => {
         if (clickEvent.target.id.startsWith("associates--")) {
